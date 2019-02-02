@@ -15,7 +15,8 @@ class App extends Component {
   }
    componentDidMount(){
     fetch('https://yts.am/api/v2/list_movies.json?sort_by=download_count')
-    .then(potato => console.log(potato)) //이렇게하면 2진코드로 데이터가 들옴
+    .then(potato => potato.json()) //2진코드를 json형태로 바꿔주고
+    .then(meoho => console.log(meoho)) //then엔 함수1개만 넣어야됨.
     .catch(err => console.log(err))  //에러보상코드
   }
 
