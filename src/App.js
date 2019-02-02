@@ -13,9 +13,10 @@ class App extends Component {
   state={
       
   }
-
    componentDidMount(){
-    console.log(fetch('https://yts.am/api/v2/list_movies.json?sort_by=download_count')) 
+    fetch('https://yts.am/api/v2/list_movies.json?sort_by=download_count')
+    .then(potato => console.log(potato)) //이렇게하면 2진코드로 데이터가 들옴
+    .catch(err => console.log(err))  //에러보상코드
   }
 
 
