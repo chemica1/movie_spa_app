@@ -17,13 +17,13 @@ class movie extends Component {
               <h1>{this.props.title}</h1>
                 <div className="Movie_Genres">
                    {this.props.genres.map(genre =>
-                       <MovieGenre genre={this.props.genres}
+                       <MovieGenre genre={genre}
                         key={this.props.id}/>)}
                 </div>
               <p className="Movie_Synopsis">
                 <LinesEllipsis
                     text={this.props.synopsis}
-                    maxLine='3'
+                    maxLine='5'
                     ellipsis='...'
                     trimRight
                     basedOn='letters'
