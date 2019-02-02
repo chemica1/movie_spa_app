@@ -3,6 +3,9 @@ import './Movie.css'
 
 
 class movie extends Component {
+
+
+
     render() {
         return (
             <div>
@@ -16,12 +19,11 @@ class movie extends Component {
     }
 }
 
+
 class MoviePoster extends Component{
     render(){
         return(
             <img src={this.props.imaging}/>
-
-
         );
     }
 }

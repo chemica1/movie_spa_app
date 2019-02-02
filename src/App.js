@@ -10,31 +10,13 @@ class App extends Component {
 //render : componentWillMount() -> render() -> componentDidMount()
 //update : componentWillReceiveProps() -> shouldComponentUpdate() -> componentWillUpdate() -> render() -> componentDidUpdate
  
-state={
+  state={
       
-}
+  }
 
    componentDidMount(){
-     setTimeout(()=>{
-       this.setState({
-         movieInfo:[
-            {
-              title : "flower",
-              poster : 'https://cdn.pixabay.com/photo/2013/07/21/13/00/rose-165819_1280.jpg'
-             },
-         
-            {
-              title : "city",
-              poster : 'https://img1.daumcdn.net/thumb/R1920x0/?fname=http%3A%2F%2Fcfile1.uf.tistory.com%2Fimage%2F25257E4753D84EE013DA26',
-            },
-            {
-              title : "sky",
-              poster :'https://cdn.pixabay.com/photo/2013/09/11/12/02/flower-181240_1280.jpg'
-             }
-         ] 
-       })      
-     }, 5000)
-   }
+    console.log(fetch('https://yts.am/api/v2/list_movies.json?sort_by=download_count')) 
+  }
 
 
   renderMovieInfo=()=>{   //react는 긴 배열에게 key값을 주라고 콘솔로 경고한다. 그래서 index 넣음
